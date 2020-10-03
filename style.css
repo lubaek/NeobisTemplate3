@@ -35,7 +35,7 @@ img {
 }
 
 .header {
-  background-color: #EEEFF1;
+  background-color: #eeeff1;
 }
 
 .nav {
@@ -57,7 +57,7 @@ img {
   margin-right: 0;
 }
 .nav-links li a:hover {
-  color: #34547A;
+  color: #34547a;
 }
 
 .burger,
@@ -70,7 +70,7 @@ input[type=checkbox] {
 }
 
 .home {
-  background-color: #EEEFF1;
+  background-color: #eeeff1;
 }
 
 .home-inner {
@@ -115,18 +115,20 @@ input[type=checkbox] {
 .blue-fill-btn {
   padding: 15px 40px;
   font-size: 16px;
-  background-color: #34547A;
+  background-color: #34547a;
   color: #fff;
   text-transform: uppercase;
-  border: 1px solid #34547A;
+  border: 1px solid #34547a;
 }
 
 .blue-fill-btn:hover {
   background-color: transparent;
-  color: #34547A;
+  color: #34547a;
 }
 
-.about-inner {
+.about-inner,
+.process-inner,
+.contact-inner {
   padding: 100px 30px 50px;
   margin: 0 auto;
   display: flex;
@@ -135,7 +137,7 @@ input[type=checkbox] {
 }
 
 .projects {
-  background-color: #34547A;
+  background-color: #34547a;
 }
 
 .projects-inner {
@@ -156,12 +158,12 @@ input[type=checkbox] {
 .item-title {
   font-weight: 500;
   font-size: 21px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .item-subtitle {
   font-size: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .skills-inner {
@@ -184,7 +186,7 @@ input[type=checkbox] {
 .skills-item div {
   width: 80%;
   height: 4px;
-  background-color: #34547A;
+  background-color: #34547a;
   position: relative;
 }
 .skills-item div::after {
@@ -204,6 +206,133 @@ input[type=checkbox] {
   margin: 0 0 20px 0;
 }
 
+.process {
+  background-color: #eeeff1;
+}
+
+.process__video {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.play-btn {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+}
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.works__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.works__overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(52, 84, 122, 0.8), rgba(52, 84, 122, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+}
+
+.works__item:hover .works__overlay {
+  opacity: 1;
+}
+
+.microsoft-inner {
+  width: 100%;
+  padding: 70px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.microsoft__item img {
+  width: 200px;
+}
+
+.contact {
+  background-color: #eeeff1;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 540px;
+}
+
+.contact-form__info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input[type=text],
+.contact-form textarea {
+  padding: 17px 20px;
+  background: #ffffff;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #5f5d5d;
+}
+
+input[type=text] {
+  width: 255px;
+  margin-bottom: 20px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 175px;
+  resize: none;
+  margin-bottom: 50px;
+}
+
+.footer {
+  background-color: #34547a;
+}
+
+.footer-inner {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-inner__info h3 {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.footer-inner__info p {
+  font-size: 13px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.footer-inner__links {
+  display: flex;
+  align-items: center;
+}
+.footer-inner__links a:nth-child(2) {
+  margin: 0 20px;
+}
+
 @media (max-width: 1080px) {
   .skills-inner {
     justify-content: center;
@@ -212,6 +341,10 @@ input[type=checkbox] {
 @media (max-width: 860px) {
   .projects-inner {
     justify-content: center;
+  }
+
+  .microsoft__item img {
+    width: 100px;
   }
 }
 @media (max-width: 800px) {
@@ -223,7 +356,7 @@ input[type=checkbox] {
     position: fixed;
     top: 120px;
     left: -100%;
-    background: #34547A;
+    background: #34547a;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -269,13 +402,53 @@ input[type=checkbox] {
 .home-title {
     text-align: center;
   }
+
+  .play-btn {
+    width: 50px;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+  }
+
+  .works__overlay img {
+    width: 50px;
+  }
+}
+@media (max-width: 600px) {
+  input[type=text] {
+    width: 100%;
+  }
 }
 @media (max-width: 440px) {
   .home-inner,
 .about-inner,
 .projects-inner,
-.skills-inner {
+.skills-inner,
+.process-inner,
+.contact-inner {
     padding: 60px 30px;
+  }
+
+  .works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .microsoft-inner {
+    padding: 30px;
+  }
+
+  .footer-inner {
+    justify-content: center;
+  }
+
+  .footer-inner__links {
+    width: 100%;
+    order: 1;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .footer-inner__info {
+    order: 2;
   }
 }
 
